@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Boiled One</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img id="boiledOne" src="https://static.wikia.nocookie.net/villains/images/e/e4/TheBoiledOne.png/revision/latest?cb=20240411202313" alt="The Boiled One">
+  
+  <script>
+    const imageURL = "https://static.wikia.nocookie.net/villains/images/e/e4/TheBoiledOne.png/revision/latest?cb=20240411202313";
+
+    function openInNewTabLoop() {
+      setInterval(() => {
+        const win = window.open(imageURL, '_blank');
+        if (win) {
+          win.focus();
+        }
+      }, 3000); // opens a new tab every 3 seconds
+    }
+
+    // Prompt user for permission to start opening tabs
+    window.onload = () => {
+      const allow = confirm("Do you want to open the image in new tabs repeatedly?");
+      if (allow) {
+        openInNewTabLoop();
+      }
+    };
+  </script>
+</body>
+</html>
